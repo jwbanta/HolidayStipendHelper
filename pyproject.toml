@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "holiday-stipend-helper"
+version = "0.1.0"
+description = "Discover employee-list files for holiday stipend verification"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["openpyxl>=3.1,<4"]
+
+[project.scripts]
+holiday-stipend = "holiday_stipend.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
